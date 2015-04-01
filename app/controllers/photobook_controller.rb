@@ -16,17 +16,4 @@ class PhotobookController < ApplicationController
         format.html
       end
   end
-  def createphotobookxml
-    x = Builder::XmlMarkup.new(:target=> $stduot,:indent =>1)
-    x.instruct!
-    Photobook.all.each do |p|
-      x.data{
-        x.i("name" => p.bookname,"data"=>p.id){
-        }
-      }
-    end
-      File.open("public/CSPHOTO/menuDatarb.xml","wb") do |f|
-        f.write(x)
-      end
-  end
 end

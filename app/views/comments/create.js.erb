@@ -1,7 +1,6 @@
 /**
  * Created by neekin on 15/3/26.
  */
-
 var  f=$("input[name='comment[issue_id]'][value=<%= @comment.issue_id%>]").parents("form");
 var html = "<%= j render partial:'/comments/comment',locals: {comment:@comment} %>";
 var thisid =".issue"+<%= @comment.issue_id%>;
