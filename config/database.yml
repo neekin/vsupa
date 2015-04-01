@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: Kinup_production
-  username: Kinup
-  password: <%= ENV['KINUP_DATABASE_PASSWORD'] %>
+  username: root
+  password: 334132462
